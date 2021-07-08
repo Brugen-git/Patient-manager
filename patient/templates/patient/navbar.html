@@ -1,0 +1,49 @@
+<style>
+.button {
+  border: none;
+  color: rgb(253, 1, 1);
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: rgb(32, 211, 243); 
+  color: black; 
+  border-radius: 20px;
+  
+}
+
+.button1:hover {
+  background-color: #8416dd;
+  color: white;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
+  <a class="navbar-brand" href="{% url 'home' %}">Patient Manager</a>
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button class="button button1"><a class="nav-link" href="{% url 'listpatient1' %}">List of Patients <span class="sr-only">(current)</span></a></button>
+      </li>
+      
+      <li class="nav-item active">
+        <button class="button button1"><a class="nav-link" href="{% url 'addpatient' %}">Add Patient <span class="sr-only">(current)</span></a></button>
+      </li>
+
+      <li class="nav-item active">
+        <button class="button button1"><a class="nav-link" href="{% url 'updatepatient' %}">Update Patient <span class="sr-only">(current)</span></a></button>
+      </li>
+      
+      <li class="nav-item active">
+        <button class="button button1"><a class="nav-link" href="{% url 'deletepatient' %}">Delete Patient <span class="sr-only">(current)</span></a></button>
+      </li>
+    </ul>
+  </div>
+</nav>
